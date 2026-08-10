@@ -1,3 +1,5 @@
+
+
 <a id="english"></a>
 
 # Codex Engineering Skills
@@ -80,7 +82,7 @@ npx skills@latest add AojiLi/codex-skills --skill codex-project-settings
 The reusable project baseline is documented in [codex_agent_framework.md](./codex_agent_framework.md). Its selective context model is:
 
 - `AGENTS.md`: natively discovered repository commands, rules, verification, and routing.
-- `CONTEXT.md`: optional on-demand durable project facts and invariants.
+- `CONTEXT.md`: optional on-demand durable project facts and invariants (recommended soft budget: 1,000 words; hard cap: 1,500 words).
 - `.agents/skills/`: optional project-specific workflows.
 
 ## Structure
