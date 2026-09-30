@@ -1,17 +1,18 @@
-# Codex Engineering Skills
+# Codex Engineering And Research Skills
 
 Language: English | [中文](./README.zh-CN.md)
 
 ![Anime-style Codex skills engineering workspace](./assets/codex-skills-hero-engineering.png)
 
-Reusable Codex skills for stress-testing engineering plans, researching primary sources, reviewing repository-backed technical decisions, and establishing durable project settings.
+Reusable Codex skills for robotics and embodied-AI research, stress-testing engineering plans, investigating primary sources, reviewing repository-backed technical decisions, and establishing durable project settings.
 
-This repository is intentionally engineering-focused. General idea-validation, decision, writing, frontend-design, and algorithmic-art skills live in [AojiLi/codex-general-skills](https://github.com/AojiLi/codex-general-skills).
+This repository focuses on engineering and robotics research workflows. General idea-validation, decision, writing, frontend-design, and algorithmic-art skills live in [AojiLi/codex-general-skills](https://github.com/AojiLi/codex-general-skills).
 
 ## Operating Model
 
 - Clarify the engineering question before implementation.
 - Inspect relevant repository evidence before giving technical advice.
+- For research changes, inspect papers and author implementations, reuse applicable components, and define a discriminating experiment before adding complexity.
 - Use subagents when repository size or context pressure makes independent coverage useful.
 - Keep recommendations small, reversible, testable, and explicit about unknowns.
 - Keep durable project facts in authoritative docs and load optional context only when needed.
@@ -29,6 +30,14 @@ Use $grill-me to stress-test this API migration plan: [describe the plan].
 ```
 
 ### Research And Engineering Review
+
+#### [embodied-research](./skills/embodied-research/SKILL.md)
+
+Use it for robotics algorithms, robot learning, model training, baseline reproduction, and embodied-AI simulation ideas. It investigates original papers and actual implementations, identifies reusable components, and proposes the smallest experiment that can test the hypothesis. It distinguishes reported claims, inspected code, observed results, and assumptions; training runs stay within the authorized scope and budget.
+
+```text
+Use $embodied-research to investigate whether longer observation history helps this policy recover from occlusion. Inspect the existing baseline and author implementations, then propose a reuse plan and controlled experiment. Do not start training yet.
+```
 
 #### [research](./skills/research/SKILL.md)
 
@@ -58,7 +67,7 @@ Use $codex-project-settings to initialize this repository for long-term Codex wo
 
 ## Install
 
-Install all engineering skills:
+Install all skills:
 
 ```bash
 npx skills@latest add AojiLi/codex-skills
@@ -71,7 +80,18 @@ npx skills@latest add AojiLi/codex-skills --skill grill-me
 npx skills@latest add AojiLi/codex-skills --skill research
 npx skills@latest add AojiLi/codex-skills --skill engineering-decision-review
 npx skills@latest add AojiLi/codex-skills --skill codex-project-settings
+npx skills@latest add AojiLi/codex-skills --skill embodied-research
 ```
+
+## Use In A Robotics Project
+
+Run this from the actual research project's directory to install only the research workflow for Codex:
+
+```bash
+npx skills@latest add AojiLi/codex-skills --skill embodied-research --agent codex --yes
+```
+
+Installing a skill does not create project instructions or install training/simulation dependencies. See the [robotics project setup guide (中文)](./docs/robotics-project-setup.md) and [AGENTS.md template (中文)](./docs/templates/robotics-AGENTS.md) for project-level routing, research records, usage checks, and updates. Merge the template with existing project rules rather than overwriting them.
 
 ## Codex Project Settings Framework
 
@@ -89,9 +109,13 @@ codex-skills/
 |-- README.en.md
 |-- README.zh-CN.md
 |-- codex_agent_framework.md
+|-- docs/
+|   |-- robotics-project-setup.md
+|   `-- templates/robotics-AGENTS.md
 `-- skills/
     |-- grill-me/
     |-- research/
+    |-- embodied-research/
     |-- engineering-decision-review/
     `-- codex-project-settings/
 ```

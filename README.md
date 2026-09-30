@@ -1,19 +1,20 @@
 <a id="english"></a>
 
-# Codex Engineering Skills
+# Codex Engineering And Research Skills
 
 Language: English | [中文](#user-content-zh-cn)
 
 ![Anime-style Codex skills engineering workspace](./assets/codex-skills-hero-engineering.png)
 
-Reusable Codex skills for stress-testing engineering plans, researching primary sources, reviewing repository-backed technical decisions, and establishing durable project settings.
+Reusable Codex skills for robotics and embodied-AI research, stress-testing engineering plans, investigating primary sources, reviewing repository-backed technical decisions, and establishing durable project settings.
 
-This repository is intentionally engineering-focused. General idea-validation, decision, writing, frontend-design, and algorithmic-art skills live in [AojiLi/codex-general-skills](https://github.com/AojiLi/codex-general-skills).
+This repository focuses on engineering and robotics research workflows. General idea-validation, decision, writing, frontend-design, and algorithmic-art skills live in [AojiLi/codex-general-skills](https://github.com/AojiLi/codex-general-skills).
 
 ## Operating Model
 
 - Clarify the engineering question before implementation.
 - Inspect relevant repository evidence before giving technical advice.
+- For research changes, inspect papers and author implementations, reuse applicable components, and define a discriminating experiment before adding complexity.
 - Use subagents when repository size or context pressure makes independent coverage useful.
 - Keep recommendations small, reversible, testable, and explicit about unknowns.
 - Keep durable project facts in authoritative docs and load optional context only when needed.
@@ -31,6 +32,14 @@ Use $grill-me to stress-test this API migration plan: [describe the plan].
 ```
 
 ### Research And Engineering Review
+
+#### [embodied-research](./skills/embodied-research/SKILL.md)
+
+Use it for robotics algorithms, robot learning, model training, baseline reproduction, and embodied-AI simulation ideas. It investigates original papers and actual implementations, identifies reusable components, and proposes the smallest experiment that can test the hypothesis. It distinguishes reported claims, inspected code, observed results, and assumptions; training runs stay within the authorized scope and budget.
+
+```text
+Use $embodied-research to investigate whether longer observation history helps this policy recover from occlusion. Inspect the existing baseline and author implementations, then propose a reuse plan and controlled experiment. Do not start training yet.
+```
 
 #### [research](./skills/research/SKILL.md)
 
@@ -60,7 +69,7 @@ Use $codex-project-settings to initialize this repository for long-term Codex wo
 
 ## Install
 
-Install all engineering skills:
+Install all skills:
 
 ```bash
 npx skills@latest add AojiLi/codex-skills
@@ -73,7 +82,18 @@ npx skills@latest add AojiLi/codex-skills --skill grill-me
 npx skills@latest add AojiLi/codex-skills --skill research
 npx skills@latest add AojiLi/codex-skills --skill engineering-decision-review
 npx skills@latest add AojiLi/codex-skills --skill codex-project-settings
+npx skills@latest add AojiLi/codex-skills --skill embodied-research
 ```
+
+## Use In A Robotics Project
+
+Run this from the actual research project's directory to install only the research workflow for Codex:
+
+```bash
+npx skills@latest add AojiLi/codex-skills --skill embodied-research --agent codex --yes
+```
+
+Installing a skill does not create project instructions or install training/simulation dependencies. See the [robotics project setup guide (中文)](./docs/robotics-project-setup.md) and [AGENTS.md template (中文)](./docs/templates/robotics-AGENTS.md) for project-level routing, research records, usage checks, and updates. Merge the template with existing project rules rather than overwriting them.
 
 ## Codex Project Settings Framework
 
@@ -91,9 +111,13 @@ codex-skills/
 |-- README.en.md
 |-- README.zh-CN.md
 |-- codex_agent_framework.md
+|-- docs/
+|   |-- robotics-project-setup.md
+|   `-- templates/robotics-AGENTS.md
 `-- skills/
     |-- grill-me/
     |-- research/
+    |-- embodied-research/
     |-- engineering-decision-review/
     `-- codex-project-settings/
 ```
@@ -108,20 +132,21 @@ python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/<
 
 <a id="zh-cn"></a>
 
-# Codex Engineering Skills
+# Codex Engineering And Research Skills
 
 语言版本：[English](#user-content-english) | 中文
 
 ![二次元风格 Codex skills 工程化工作台](./assets/codex-skills-hero-engineering.png)
 
-这是一组工程专用的 Codex skills，用于压力测试工程计划、调研一手资料、基于仓库证据审核技术决策，以及建立长期可维护的项目设置。
+这是一组工程与研究专用的 Codex skills，用于机器人算法与具身智能研究、压力测试工程计划、调研一手资料、基于仓库证据审核技术决策，以及建立长期可维护的项目设置。
 
-这个仓库现在只关注工程工作流。通用 idea 验证、决策、文字编辑、前端设计和算法艺术 skills 已移动到 [AojiLi/codex-general-skills](https://github.com/AojiLi/codex-general-skills)。
+这个仓库关注工程和机器人研究工作流。通用 idea 验证、决策、文字编辑、前端设计和算法艺术 skills 已移动到 [AojiLi/codex-general-skills](https://github.com/AojiLi/codex-general-skills)。
 
 ## 工作模型
 
 - 在实现前先澄清工程问题。
 - 在给出技术建议前检查相关仓库证据。
+- 对研究改动，先查论文和作者实现、复用适用组件，再设计能区分解释的实验，最后增加必要的新部分。
 - 当仓库较大或主上下文压力较高时，使用 subagents 做独立覆盖。
 - 推荐路径保持小、可逆、可测试，并明确披露未知部分。
 - 把稳定项目事实放在权威文档中，只在需要时读取可选上下文。
@@ -139,6 +164,14 @@ python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/<
 ```
 
 ### 调研与工程审核
+
+#### [embodied-research](./skills/embodied-research/SKILL.md)
+
+适合机器人算法、机器人学习、模型训练、基线复现和具身智能仿真 idea。它先调查原始论文和实际实现，判断可复用部分，再提出能验证假设的最小实验；区分论文报告、源码确认、本地观察与推测，并在已授权的范围和预算内开展训练。
+
+```text
+使用 $embodied-research 调查：延长观测历史能否改善策略在遮挡后的恢复？先检查当前基线和作者实现，给出复用方案与对照实验。这次不启动训练。
+```
 
 #### [research](./skills/research/SKILL.md)
 
@@ -168,7 +201,7 @@ python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/<
 
 ## 安装
 
-安装全部工程 skills：
+安装全部 skills：
 
 ```bash
 npx skills@latest add AojiLi/codex-skills
@@ -181,7 +214,18 @@ npx skills@latest add AojiLi/codex-skills --skill grill-me
 npx skills@latest add AojiLi/codex-skills --skill research
 npx skills@latest add AojiLi/codex-skills --skill engineering-decision-review
 npx skills@latest add AojiLi/codex-skills --skill codex-project-settings
+npx skills@latest add AojiLi/codex-skills --skill embodied-research
 ```
+
+## 在实际机器人项目里使用
+
+进入实际研究项目目录，按项目安装指定的 Codex skill：
+
+```bash
+npx skills@latest add AojiLi/codex-skills --skill embodied-research --agent codex --yes
+```
+
+安装 skill 不会自动创建项目规则或安装训练/仿真依赖。参见 [项目接入说明](./docs/robotics-project-setup.md) 和 [AGENTS.md 模板](./docs/templates/robotics-AGENTS.md)，了解默认路由、研究记录、使用验收和更新方法。已有项目规则应先读再合并，不整体覆盖。
 
 ## Codex Project Settings Framework
 
@@ -199,9 +243,13 @@ codex-skills/
 |-- README.en.md
 |-- README.zh-CN.md
 |-- codex_agent_framework.md
+|-- docs/
+|   |-- robotics-project-setup.md
+|   `-- templates/robotics-AGENTS.md
 `-- skills/
     |-- grill-me/
     |-- research/
+    |-- embodied-research/
     |-- engineering-decision-review/
     `-- codex-project-settings/
 ```

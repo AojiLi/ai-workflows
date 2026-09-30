@@ -11,6 +11,7 @@ This is a selective Codex settings baseline for repositories. Its purpose is to 
 - Keep optional context bounded and route it by task instead of loading all project material every time.
 - Put repo-local Codex workflow modules in `.agents/skills/` only when the project needs them.
 - Use `<reference-skill>` when project decisions need support from papers, open-source repositories, protocols, APIs, schemas, or other references.
+- For robotics and embodied-AI projects, the reusable `embodied-research` skill is a lightweight starting point. See the [project setup guide](./docs/robotics-project-setup.md) and [AGENTS.md template](./docs/templates/robotics-AGENTS.md); a full reference-management directory is optional.
 - Treat modules such as `builder-checker` as optional. Do not copy them into projects that do not need them.
 - This framework defines how Codex should understand and move the project forward. Project-specific training, deployment, evaluation, and release loops belong in project docs, runbooks, scripts, or source files.
 
