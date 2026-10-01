@@ -10,7 +10,7 @@
 
 ```bash
 cd /path/to/your-robotics-project
-npx skills@latest add AojiLi/codex-skills --skill embodied-research --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill embodied-research --agent codex --yes
 ```
 
 `/path/to/your-robotics-project` 要换成真实路径。这个命令按项目安装指定技能；不加 `--global`，不必把整个技能库装进去。需要交互选择时可以去掉 `--yes`。
@@ -78,7 +78,7 @@ your-robotics-project/
 
 ## 5. 维护与更新
 
-在 `codex-skills` 修改通用工作流，验证后提交 GitHub 更新；实际项目再更新已安装的技能：
+在 `ai-workflows` 修改通用工作流，验证后提交 GitHub 更新；实际项目再更新已安装的技能：
 
 ```bash
 cd /path/to/your-robotics-project

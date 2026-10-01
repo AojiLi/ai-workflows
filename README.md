@@ -1,12 +1,12 @@
 <a id="english"></a>
 
-# Codex Engineering And Research Skills
+# AI Workflows
 
 Language: English | [中文](#user-content-zh-cn)
 
 ![Anime-style Codex skills engineering workspace](./assets/codex-skills-hero-engineering.png)
 
-Reusable Codex skills for robotics and embodied-AI research, stress-testing engineering plans, investigating primary sources, reviewing repository-backed technical decisions, and establishing durable project settings.
+Reusable AI working methods and installable skills for robotics and embodied-AI research, stress-testing engineering plans, investigating primary sources, reviewing repository-backed technical decisions, and establishing durable project settings. Start with Codex; the project setup guide also describes skill installation for Claude Code.
 
 This repository focuses on engineering and robotics research workflows. General idea-validation, decision, writing, frontend-design, and algorithmic-art skills live in [AojiLi/codex-general-skills](https://github.com/AojiLi/codex-general-skills).
 
@@ -72,17 +72,17 @@ Use $codex-project-settings to initialize this repository for long-term Codex wo
 Install all skills:
 
 ```bash
-npx skills@latest add AojiLi/codex-skills
+npx skills@latest add AojiLi/ai-workflows
 ```
 
 Install one skill:
 
 ```bash
-npx skills@latest add AojiLi/codex-skills --skill grill-me
-npx skills@latest add AojiLi/codex-skills --skill research
-npx skills@latest add AojiLi/codex-skills --skill engineering-decision-review
-npx skills@latest add AojiLi/codex-skills --skill codex-project-settings
-npx skills@latest add AojiLi/codex-skills --skill embodied-research
+npx skills@latest add AojiLi/ai-workflows --skill grill-me
+npx skills@latest add AojiLi/ai-workflows --skill research
+npx skills@latest add AojiLi/ai-workflows --skill engineering-decision-review
+npx skills@latest add AojiLi/ai-workflows --skill codex-project-settings
+npx skills@latest add AojiLi/ai-workflows --skill embodied-research
 ```
 
 ## Use In A Robotics Project
@@ -90,7 +90,7 @@ npx skills@latest add AojiLi/codex-skills --skill embodied-research
 Run this from the actual research project's directory to install only the research workflow for Codex:
 
 ```bash
-npx skills@latest add AojiLi/codex-skills --skill embodied-research --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill embodied-research --agent codex --yes
 ```
 
 Installing a skill does not create project instructions or install training/simulation dependencies. See the [robotics project setup guide (中文)](./docs/robotics-project-setup.md) and [AGENTS.md template (中文)](./docs/templates/robotics-AGENTS.md) for project-level routing, research records, usage checks, and updates. Merge the template with existing project rules rather than overwriting them.
@@ -106,12 +106,13 @@ The reusable project baseline is documented in [codex_agent_framework.md](./code
 ## Structure
 
 ```text
-codex-skills/
+ai-workflows/
 |-- README.md
 |-- README.en.md
 |-- README.zh-CN.md
 |-- codex_agent_framework.md
 |-- docs/
+|   |-- repository-rename.md
 |   |-- robotics-project-setup.md
 |   `-- templates/robotics-AGENTS.md
 `-- skills/
@@ -132,13 +133,13 @@ python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/<
 
 <a id="zh-cn"></a>
 
-# Codex Engineering And Research Skills
+# AI 使用技巧与工作方法
 
 语言版本：[English](#user-content-english) | 中文
 
 ![二次元风格 Codex skills 工程化工作台](./assets/codex-skills-hero-engineering.png)
 
-这是一组工程与研究专用的 Codex skills，用于机器人算法与具身智能研究、压力测试工程计划、调研一手资料、基于仓库证据审核技术决策，以及建立长期可维护的项目设置。
+这是一个 AI 使用技巧与工作方法库，包含可安装的 skills、AGENTS.md 使用方法和研究工作流，覆盖机器人算法与具身智能研究、工程计划审视、一手资料调研和项目设置。目前以 Codex 为主，项目接入说明也介绍 Claude Code 的技能安装方式。
 
 这个仓库关注工程和机器人研究工作流。通用 idea 验证、决策、文字编辑、前端设计和算法艺术 skills 已移动到 [AojiLi/codex-general-skills](https://github.com/AojiLi/codex-general-skills)。
 
@@ -204,17 +205,17 @@ python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/<
 安装全部 skills：
 
 ```bash
-npx skills@latest add AojiLi/codex-skills
+npx skills@latest add AojiLi/ai-workflows
 ```
 
 安装单个 skill：
 
 ```bash
-npx skills@latest add AojiLi/codex-skills --skill grill-me
-npx skills@latest add AojiLi/codex-skills --skill research
-npx skills@latest add AojiLi/codex-skills --skill engineering-decision-review
-npx skills@latest add AojiLi/codex-skills --skill codex-project-settings
-npx skills@latest add AojiLi/codex-skills --skill embodied-research
+npx skills@latest add AojiLi/ai-workflows --skill grill-me
+npx skills@latest add AojiLi/ai-workflows --skill research
+npx skills@latest add AojiLi/ai-workflows --skill engineering-decision-review
+npx skills@latest add AojiLi/ai-workflows --skill codex-project-settings
+npx skills@latest add AojiLi/ai-workflows --skill embodied-research
 ```
 
 ## 在实际机器人项目里使用
@@ -222,7 +223,7 @@ npx skills@latest add AojiLi/codex-skills --skill embodied-research
 进入实际研究项目目录，按项目安装指定的 Codex skill：
 
 ```bash
-npx skills@latest add AojiLi/codex-skills --skill embodied-research --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill embodied-research --agent codex --yes
 ```
 
 安装 skill 不会自动创建项目规则或安装训练/仿真依赖。参见 [项目接入说明](./docs/robotics-project-setup.md) 和 [AGENTS.md 模板](./docs/templates/robotics-AGENTS.md)，了解默认路由、研究记录、使用验收和更新方法。已有项目规则应先读再合并，不整体覆盖。
@@ -238,12 +239,13 @@ npx skills@latest add AojiLi/codex-skills --skill embodied-research --agent code
 ## 目录结构
 
 ```text
-codex-skills/
+ai-workflows/
 |-- README.md
 |-- README.en.md
 |-- README.zh-CN.md
 |-- codex_agent_framework.md
 |-- docs/
+|   |-- repository-rename.md
 |   |-- robotics-project-setup.md
 |   `-- templates/robotics-AGENTS.md
 `-- skills/

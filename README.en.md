@@ -1,10 +1,10 @@
-# Codex Engineering And Research Skills
+# AI Workflows
 
 Language: English | [中文](./README.zh-CN.md)
 
 ![Anime-style Codex skills engineering workspace](./assets/codex-skills-hero-engineering.png)
 
-Reusable Codex skills for robotics and embodied-AI research, stress-testing engineering plans, investigating primary sources, reviewing repository-backed technical decisions, and establishing durable project settings.
+Reusable AI working methods and installable skills for robotics and embodied-AI research, stress-testing engineering plans, investigating primary sources, reviewing repository-backed technical decisions, and establishing durable project settings. Start with Codex; the project setup guide also describes skill installation for Claude Code.
 
 This repository focuses on engineering and robotics research workflows. General idea-validation, decision, writing, frontend-design, and algorithmic-art skills live in [AojiLi/codex-general-skills](https://github.com/AojiLi/codex-general-skills).
 
@@ -70,17 +70,17 @@ Use $codex-project-settings to initialize this repository for long-term Codex wo
 Install all skills:
 
 ```bash
-npx skills@latest add AojiLi/codex-skills
+npx skills@latest add AojiLi/ai-workflows
 ```
 
 Install one skill:
 
 ```bash
-npx skills@latest add AojiLi/codex-skills --skill grill-me
-npx skills@latest add AojiLi/codex-skills --skill research
-npx skills@latest add AojiLi/codex-skills --skill engineering-decision-review
-npx skills@latest add AojiLi/codex-skills --skill codex-project-settings
-npx skills@latest add AojiLi/codex-skills --skill embodied-research
+npx skills@latest add AojiLi/ai-workflows --skill grill-me
+npx skills@latest add AojiLi/ai-workflows --skill research
+npx skills@latest add AojiLi/ai-workflows --skill engineering-decision-review
+npx skills@latest add AojiLi/ai-workflows --skill codex-project-settings
+npx skills@latest add AojiLi/ai-workflows --skill embodied-research
 ```
 
 ## Use In A Robotics Project
@@ -88,7 +88,7 @@ npx skills@latest add AojiLi/codex-skills --skill embodied-research
 Run this from the actual research project's directory to install only the research workflow for Codex:
 
 ```bash
-npx skills@latest add AojiLi/codex-skills --skill embodied-research --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill embodied-research --agent codex --yes
 ```
 
 Installing a skill does not create project instructions or install training/simulation dependencies. See the [robotics project setup guide (中文)](./docs/robotics-project-setup.md) and [AGENTS.md template (中文)](./docs/templates/robotics-AGENTS.md) for project-level routing, research records, usage checks, and updates. Merge the template with existing project rules rather than overwriting them.
@@ -104,12 +104,13 @@ The reusable project baseline is documented in [codex_agent_framework.md](./code
 ## Structure
 
 ```text
-codex-skills/
+ai-workflows/
 |-- README.md
 |-- README.en.md
 |-- README.zh-CN.md
 |-- codex_agent_framework.md
 |-- docs/
+|   |-- repository-rename.md
 |   |-- robotics-project-setup.md
 |   `-- templates/robotics-AGENTS.md
 `-- skills/
