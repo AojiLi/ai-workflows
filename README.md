@@ -18,20 +18,20 @@ A small library of reusable AI skills for clarifying plans, researching primary 
 
 Run from the project where you want to use the skills.
 
-The simplified library and `model-training` are currently on `codex/simplify-skills`. The commands below install that branch; omit `#codex/simplify-skills` after it is merged into `main`.
+The simplified library and `model-training` are currently on `model-training`. The commands below install that branch; omit `#model-training` after it is merged into `main`.
 
 Install all skills:
 
 ```bash
-npx skills@latest add 'AojiLi/ai-workflows#codex/simplify-skills'
+npx skills@latest add 'AojiLi/ai-workflows#model-training'
 ```
 
 Install one skill for Codex:
 
 ```bash
-npx skills@latest add 'AojiLi/ai-workflows#codex/simplify-skills' --skill grill-me --agent codex --yes
-npx skills@latest add 'AojiLi/ai-workflows#codex/simplify-skills' --skill research --agent codex --yes
-npx skills@latest add 'AojiLi/ai-workflows#codex/simplify-skills' --skill model-training --agent codex --yes
+npx skills@latest add 'AojiLi/ai-workflows#model-training' --skill grill-me --agent codex --yes
+npx skills@latest add 'AojiLi/ai-workflows#model-training' --skill research --agent codex --yes
+npx skills@latest add 'AojiLi/ai-workflows#model-training' --skill model-training --agent codex --yes
 ```
 
 ## Use
@@ -88,20 +88,20 @@ ai-workflows/
 
 在需要使用 skills 的项目目录中运行。
 
-精简后的技能库和 `model-training` 目前位于 `codex/simplify-skills` 分支。以下命令安装该分支；合并到 `main` 后可省略 `#codex/simplify-skills`。
+精简后的技能库和 `model-training` 目前位于 `model-training` 分支。以下命令安装该分支；合并到 `main` 后可省略 `#model-training`。
 
 安装全部 skills：
 
 ```bash
-npx skills@latest add 'AojiLi/ai-workflows#codex/simplify-skills'
+npx skills@latest add 'AojiLi/ai-workflows#model-training'
 ```
 
 为 Codex 安装单个 skill：
 
 ```bash
-npx skills@latest add 'AojiLi/ai-workflows#codex/simplify-skills' --skill grill-me --agent codex --yes
-npx skills@latest add 'AojiLi/ai-workflows#codex/simplify-skills' --skill research --agent codex --yes
-npx skills@latest add 'AojiLi/ai-workflows#codex/simplify-skills' --skill model-training --agent codex --yes
+npx skills@latest add 'AojiLi/ai-workflows#model-training' --skill grill-me --agent codex --yes
+npx skills@latest add 'AojiLi/ai-workflows#model-training' --skill research --agent codex --yes
+npx skills@latest add 'AojiLi/ai-workflows#model-training' --skill model-training --agent codex --yes
 ```
 
 ## 使用

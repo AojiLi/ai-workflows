@@ -16,20 +16,20 @@ A small library of reusable AI skills for clarifying plans, researching primary 
 
 Run from the project where you want to use the skills.
 
-The simplified library and `model-training` are currently on `codex/simplify-skills`. The commands below install that branch; omit `#codex/simplify-skills` after it is merged into `main`.
+The simplified library and `model-training` are currently on `model-training`. The commands below install that branch; omit `#model-training` after it is merged into `main`.
 
 Install all skills:
 
 ```bash
-npx skills@latest add 'AojiLi/ai-workflows#codex/simplify-skills'
+npx skills@latest add 'AojiLi/ai-workflows#model-training'
 ```
 
 Install one skill for Codex:
 
 ```bash
-npx skills@latest add 'AojiLi/ai-workflows#codex/simplify-skills' --skill grill-me --agent codex --yes
-npx skills@latest add 'AojiLi/ai-workflows#codex/simplify-skills' --skill research --agent codex --yes
-npx skills@latest add 'AojiLi/ai-workflows#codex/simplify-skills' --skill model-training --agent codex --yes
+npx skills@latest add 'AojiLi/ai-workflows#model-training' --skill grill-me --agent codex --yes
+npx skills@latest add 'AojiLi/ai-workflows#model-training' --skill research --agent codex --yes
+npx skills@latest add 'AojiLi/ai-workflows#model-training' --skill model-training --agent codex --yes
 ```
 
 ## Use
