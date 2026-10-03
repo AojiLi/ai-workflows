@@ -2,45 +2,33 @@
 
 Language: English | [中文](./README.zh-CN.md)
 
-A small library of reusable AI skills for clarifying plans, researching primary sources, and carrying out model training.
+A reusable AI skill for carrying out model training and evaluation.
 
 ## Skills
 
 | Skill | Purpose |
 | --- | --- |
-| [grill-me](./skills/grill-me/SKILL.md) | Examine a plan's assumptions and decisions, one question at a time. Inspect the codebase for answers available there. |
-| [research](./skills/research/SKILL.md) | Delegate primary-source research to a background agent and save a cited Markdown report in the project. |
 | [model-training](./skills/model-training/SKILL.md) | Follow established practices, carry out model or RL training and evaluation, and decide reasonably whether to continue. |
 
 ## Install
 
-Run from the project where you want to use the skills.
+Run from the project where you want to use the skill.
 
-The simplified library and `model-training` are currently on `model-training`. The commands below install that branch; omit `#model-training` after it is merged into `main`.
+This `model-training` branch contains only the `model-training` skill. The commands below install that branch.
 
-Install all skills:
+Install the skill:
 
 ```bash
 npx skills@latest add 'AojiLi/ai-workflows#model-training'
 ```
 
-Install one skill for Codex:
+Install for Codex:
 
 ```bash
-npx skills@latest add 'AojiLi/ai-workflows#model-training' --skill grill-me --agent codex --yes
-npx skills@latest add 'AojiLi/ai-workflows#model-training' --skill research --agent codex --yes
 npx skills@latest add 'AojiLi/ai-workflows#model-training' --skill model-training --agent codex --yes
 ```
 
 ## Use
-
-```text
-Use $grill-me to examine this experiment plan: [describe the plan].
-```
-
-```text
-Use $research to investigate the official PPO training recommendations and implementations, and save a cited report in this project.
-```
 
 ```text
 Use $model-training to train and evaluate this policy. Consult established practices, proceed beyond necessary checks within the agreed budget, and report remaining gaps honestly.
@@ -61,7 +49,5 @@ ai-workflows/
 |-- README.zh-CN.md
 `-- skills/
     |-- README.md
-    |-- grill-me/
-    |-- model-training/
-    `-- research/
+    `-- model-training/
 ```
