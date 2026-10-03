@@ -1,9 +1,4 @@
 ## Model Training
 
-- For model training, fine-tuning, resuming, RL training, or the training phase of paper reproduction, use the `model-training` skill. Read `.agents/skills/model-training/SKILL.md` when installed in this project; otherwise use its available installed location. If unavailable, report that and follow the guidance below.
-- Start with the existing code, configurations, logs, and checkpoints. Consult relevant textbooks, paper training details, official documentation, and mature implementations; reuse applicable pipelines and previously verified references.
-- Reuse the user's goals, execution scope, and compute budget. Ask only for critical missing information. When training is requested, complete bounded necessary checks, then proceed to actual training within that scope. A smoke test need not converge or solve the full task.
-- Give a stable configuration sufficient training. Keep evaluation comparable, avoid restarts driven only by short-term results, and verify the required state before resuming from a checkpoint.
-- Use the designated training machine and the project's existing remote execution workflow. For long jobs, use its scheduler or a session that survives SSH disconnects. Record the command, code/configuration version, accumulated training, job identifier, logs, checkpoints, and actual execution status. Starting a job is not evidence that training finished.
-- Judge performance through independent evaluation and learning curves. For RL, distinguish training seeds from evaluation scenario seeds. Preserve failures and negative results as well as successful runs.
-- Distinguish explicit requirements from suggested targets. Decide whether to continue using the budget, adequately observed trends, evaluation variability, and the practical value of the remaining improvement. Do not lower requirements or repeatedly test just to obtain a passing sample. Stop reasonably when further work is not justified, and report unmet conditions honestly.
+For model training, fine-tuning, resuming, RL training, or the training phase of paper reproduction, use the `model-training` skill.
+Read and follow `.agents/skills/model-training/SKILL.md` (or its installed location).

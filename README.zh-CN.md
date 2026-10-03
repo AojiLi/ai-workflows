@@ -48,7 +48,7 @@ npx skills@latest add 'AojiLi/ai-workflows#codex/simplify-skills' --skill model-
 
 ## 训练项目的 AGENTS.md
 
-希望训练任务默认使用 `model-training` 时，将 [AGENTS.md 模板](./skills/model-training/assets/AGENTS.md.template) 合并到实际项目根目录的 `AGENTS.md`，保留已有规则。模板使用英文，包含远程任务、训练预算、评估与合理停止的约定。
+希望训练任务默认使用 `model-training` 时，将 [AGENTS.md 模板](./skills/model-training/assets/AGENTS.md.template) 合并到实际项目根目录的 `AGENTS.md`，保留已有规则。英文模板只负责路由，具体训练流程由 skill 维护。
 
 安装 skill 后，模板位于 `.agents/skills/model-training/assets/AGENTS.md.template`。安装不会自动创建或修改项目的 `AGENTS.md`。
 
