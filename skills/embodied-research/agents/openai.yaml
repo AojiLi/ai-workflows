@@ -1,4 +1,0 @@
-interface:
-  display_name: "Embodied Research"
-  short_description: "Research robotics ideas before experiments"
-  default_prompt: "Use $embodied-research to investigate this robotics or embodied-AI research question, inspect papers and reusable implementations, and design the smallest experiment that tests the hypothesis."
