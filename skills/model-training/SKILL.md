@@ -39,3 +39,7 @@ Near a target, assess the practical significance of the gap, evaluation variabil
 A short plateau does not automatically justify stopping; a small remaining gap does not justify unlimited retries.
 Use the budget, adequately observed trends, and stopping conditions to decide the next action.
 An experiment may reasonably end with an unresolved gap. Report it honestly without silently lowering requirements or claiming the target was met.
+
+## Optional Project Instructions
+
+An [AGENTS.md template](assets/AGENTS.md.template) is included for projects that want to route training tasks to this skill. Installing the skill does not modify project instructions; merge the template into the project's root `AGENTS.md` while preserving existing guidance.

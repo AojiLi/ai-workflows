@@ -46,6 +46,12 @@ Use $research to investigate the official PPO training recommendations and imple
 Use $model-training to train and evaluate this policy. Consult established practices, proceed beyond necessary checks within the agreed budget, and report remaining gaps honestly.
 ```
 
+## Project Instructions for Training
+
+To apply `model-training` to training tasks by default, merge the [AGENTS.md template](./skills/model-training/assets/AGENTS.md.template) into your project's root `AGENTS.md`, preserving existing instructions. The template is in English and includes guidance for remote jobs, training budgets, evaluation, and reasonable stopping.
+
+After installing the skill, the template is available at `.agents/skills/model-training/assets/AGENTS.md.template`. Installation does not create or update your project's `AGENTS.md` automatically.
+
 ## Structure
 
 ```text
