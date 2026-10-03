@@ -2,33 +2,39 @@
 
 语言版本：[English](./README.md) | 中文
 
-一个可安装到实际项目中使用的 AI skill，用于推进模型训练与评估。
+一个精简的 AI skills 库，用于调研一手资料和推进模型训练，可安装到实际项目中使用。
 
 ## Skills
 
 | Skill | 用途 |
 | --- | --- |
+| [research](./skills/research/SKILL.md) | 让后台 agent 调研一手资料，在项目中保存带来源引用的 Markdown 报告。 |
 | [model-training](./skills/model-training/SKILL.md) | 参考成熟做法，实际推进模型或 RL 训练与评估，并合理判断何时继续或停止。 |
 
 ## 安装
 
-在需要使用此 skill 的项目目录中运行。
+在需要使用 skills 的项目目录中运行。
 
-此 `model-training` 分支仅保留 `model-training` 技能。以下命令安装该分支。
+所有 skills 在 `main` 分支中按目录维护，使用 `--skill` 即可只安装需要的技能。
 
-安装此 skill：
+安装全部 skills：
 
 ```bash
-npx skills@latest add 'AojiLi/ai-workflows#model-training'
+npx skills@latest add AojiLi/ai-workflows
 ```
 
-为 Codex 安装：
+为 Codex 安装单个 skill：
 
 ```bash
-npx skills@latest add 'AojiLi/ai-workflows#model-training' --skill model-training --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill research --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill model-training --agent codex --yes
 ```
 
 ## 使用
+
+```text
+使用 $research 调研官方 PPO 训练建议和实现，在这个项目中保存带引用的报告。
+```
 
 ```text
 使用 $model-training 训练并评估这个策略。先参考成熟做法，必要检查通过后按约定预算进入正式训练，如实报告剩余差距。
@@ -49,5 +55,6 @@ ai-workflows/
 |-- README.zh-CN.md
 `-- skills/
     |-- README.md
-    `-- model-training/
+    |-- model-training/
+    `-- research/
 ```

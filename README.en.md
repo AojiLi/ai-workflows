@@ -2,33 +2,39 @@
 
 Language: English | [中文](./README.zh-CN.md)
 
-A reusable AI skill for carrying out model training and evaluation.
+A small library of reusable AI skills for researching primary sources and carrying out model training.
 
 ## Skills
 
 | Skill | Purpose |
 | --- | --- |
+| [research](./skills/research/SKILL.md) | Delegate primary-source research to a background agent and save a cited Markdown report in the project. |
 | [model-training](./skills/model-training/SKILL.md) | Follow established practices, carry out model or RL training and evaluation, and decide reasonably whether to continue. |
 
 ## Install
 
-Run from the project where you want to use the skill.
+Run from the project where you want to use the skills.
 
-This `model-training` branch contains only the `model-training` skill. The commands below install that branch.
+Skills are maintained in separate directories on `main`. Use `--skill` to install only the skill you need.
 
-Install the skill:
+Install all skills:
 
 ```bash
-npx skills@latest add 'AojiLi/ai-workflows#model-training'
+npx skills@latest add AojiLi/ai-workflows
 ```
 
-Install for Codex:
+Install one skill for Codex:
 
 ```bash
-npx skills@latest add 'AojiLi/ai-workflows#model-training' --skill model-training --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill research --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill model-training --agent codex --yes
 ```
 
 ## Use
+
+```text
+Use $research to investigate the official PPO training recommendations and implementations, and save a cited report in this project.
+```
 
 ```text
 Use $model-training to train and evaluate this policy. Consult established practices, proceed beyond necessary checks within the agreed budget, and report remaining gaps honestly.
@@ -49,5 +55,6 @@ ai-workflows/
 |-- README.zh-CN.md
 `-- skills/
     |-- README.md
-    `-- model-training/
+    |-- model-training/
+    `-- research/
 ```
