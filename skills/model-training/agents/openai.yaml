@@ -1,0 +1,4 @@
+interface:
+  display_name: "Model Training"
+  short_description: "Train and evaluate models with clear budgets"
+  default_prompt: "Use $model-training to consult established practices, carry out training and independent evaluation within the authorized budget, and decide whether further experimentation is worthwhile."
