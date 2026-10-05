@@ -2,7 +2,7 @@
 
 语言版本：[English](./README.md) | 中文
 
-一个精简的 AI skills 库，用于调研一手资料和推进模型训练，可安装到实际项目中使用。
+一个精简的 AI skills 库，用于调研一手资料、推进模型训练和澄清解释，可安装到实际项目中使用。
 
 ## Skills
 
@@ -10,6 +10,7 @@
 | --- | --- |
 | [research](./skills/research/SKILL.md) | 让后台 agent 调研一手资料，在项目中保存带来源引用的 Markdown 报告。 |
 | [model-training](./skills/model-training/SKILL.md) | 参考成熟做法，实际推进模型或 RL 训练与评估，并合理判断何时继续或停止。 |
+| [wait-what](./skills/wait-what/SKILL.md) | 没听懂时，让 AI 补充背景、重新解释。来自 Matt Pocock，需手动调用。 |
 
 ## 安装
 
@@ -28,6 +29,7 @@ npx skills@latest add AojiLi/ai-workflows
 ```bash
 npx skills@latest add AojiLi/ai-workflows --skill research --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill model-training --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill wait-what --agent codex --yes
 ```
 
 ## 使用
@@ -39,6 +41,12 @@ npx skills@latest add AojiLi/ai-workflows --skill model-training --agent codex -
 ```text
 使用 $model-training 训练并评估这个策略。先参考成熟做法，必要检查通过后按约定预算进入正式训练，如实报告剩余差距。
 ```
+
+```text
+使用 $wait-what 重新解释刚才的内容，补充我缺少的背景。
+```
+
+`wait-what` 的作者、来源版本及 MIT 许可证见 [SOURCE.md](./skills/wait-what/SOURCE.md)。保留英文原文，默认要求使用简化技术英语；没有项目词汇表也可以使用。
 
 ## 训练项目的 AGENTS.md
 
@@ -56,5 +64,6 @@ ai-workflows/
 `-- skills/
     |-- README.md
     |-- model-training/
-    `-- research/
+    |-- research/
+    `-- wait-what/
 ```

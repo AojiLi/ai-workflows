@@ -2,7 +2,7 @@
 
 Language: English | [中文](./README.zh-CN.md)
 
-A small library of reusable AI skills for researching primary sources and carrying out model training.
+A small library of reusable AI skills for researching primary sources, carrying out model training, and clarifying explanations.
 
 ## Skills
 
@@ -10,6 +10,7 @@ A small library of reusable AI skills for researching primary sources and carryi
 | --- | --- |
 | [research](./skills/research/SKILL.md) | Delegate primary-source research to a background agent and save a cited Markdown report in the project. |
 | [model-training](./skills/model-training/SKILL.md) | Follow established practices, carry out model or RL training and evaluation, and decide reasonably whether to continue. |
+| [wait-what](./skills/wait-what/SKILL.md) | Ask the agent to explain again with missing context and simpler language. Imported from Matt Pocock; invoked manually. |
 
 ## Install
 
@@ -28,6 +29,7 @@ Install one skill for Codex:
 ```bash
 npx skills@latest add AojiLi/ai-workflows --skill research --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill model-training --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill wait-what --agent codex --yes
 ```
 
 ## Use
@@ -39,6 +41,12 @@ Use $research to investigate the official PPO training recommendations and imple
 ```text
 Use $model-training to train and evaluate this policy. Consult established practices, proceed beyond necessary checks within the agreed budget, and report remaining gaps honestly.
 ```
+
+```text
+Use $wait-what to explain that again with the context I am missing.
+```
+
+Source and MIT license details for `wait-what` are in [SOURCE.md](./skills/wait-what/SOURCE.md).
 
 ## Project Instructions for Training
 
@@ -56,5 +64,6 @@ ai-workflows/
 `-- skills/
     |-- README.md
     |-- model-training/
-    `-- research/
+    |-- research/
+    `-- wait-what/
 ```
