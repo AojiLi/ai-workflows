@@ -9,6 +9,7 @@ A small library of reusable AI skills for researching primary sources, carrying 
 | Skill | Purpose |
 | --- | --- |
 | [research](./skills/research/SKILL.md) | Delegate primary-source research to a background agent and save a cited Markdown report in the project. |
+| [paper-reading](./skills/paper-reading/SKILL.md) | Read a paper through author background, its original abstract and explanation, a method flowchart, and actual results. |
 | [model-training](./skills/model-training/SKILL.md) | Follow established practices, carry out model or RL training and evaluation, and decide reasonably whether to continue. |
 | [wait-what](./skills/wait-what/SKILL.md) | Ask the agent to explain again with missing context and simpler language. Imported from Matt Pocock; invoked manually. |
 
@@ -28,11 +29,16 @@ Install one skill for Codex:
 
 ```bash
 npx skills@latest add AojiLi/ai-workflows --skill research --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill paper-reading --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill model-training --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill wait-what --agent codex --yes
 ```
 
 ## Use
+
+```text
+Use $paper-reading to explain this paper: [attach PDF or provide a paper link].
+```
 
 ```text
 Use $research to investigate the official PPO training recommendations and implementations, and save a cited report in this project.
@@ -64,6 +70,7 @@ ai-workflows/
 `-- skills/
     |-- README.md
     |-- model-training/
+    |-- paper-reading/
     |-- research/
     `-- wait-what/
 ```

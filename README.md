@@ -11,6 +11,7 @@ A small library of reusable AI skills for researching primary sources, carrying 
 | Skill | Purpose |
 | --- | --- |
 | [research](./skills/research/SKILL.md) | Delegate primary-source research to a background agent and save a cited Markdown report in the project. |
+| [paper-reading](./skills/paper-reading/SKILL.md) | Read a paper through author background, its original abstract and explanation, a method flowchart, and actual results. |
 | [model-training](./skills/model-training/SKILL.md) | Follow established practices, carry out model or RL training and evaluation, and decide reasonably whether to continue. |
 | [wait-what](./skills/wait-what/SKILL.md) | Ask the agent to explain again with missing context and simpler language. Imported from Matt Pocock; invoked manually. |
 
@@ -30,11 +31,16 @@ Install one skill for Codex:
 
 ```bash
 npx skills@latest add AojiLi/ai-workflows --skill research --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill paper-reading --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill model-training --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill wait-what --agent codex --yes
 ```
 
 ## Use
+
+```text
+Use $paper-reading to explain this paper: [attach PDF or provide a paper link].
+```
 
 ```text
 Use $research to investigate the official PPO training recommendations and implementations, and save a cited report in this project.
@@ -66,6 +72,7 @@ ai-workflows/
 `-- skills/
     |-- README.md
     |-- model-training/
+    |-- paper-reading/
     |-- research/
     `-- wait-what/
 ```
@@ -83,6 +90,7 @@ ai-workflows/
 | Skill | 用途 |
 | --- | --- |
 | [research](./skills/research/SKILL.md) | 让后台 agent 调研一手资料，在项目中保存带来源引用的 Markdown 报告。 |
+| [paper-reading](./skills/paper-reading/SKILL.md) | 按四个流程读论文：作者背景、原文摘要与解释、流程图与步骤介绍、实际结果。 |
 | [model-training](./skills/model-training/SKILL.md) | 参考成熟做法，实际推进模型或 RL 训练与评估，并合理判断何时继续或停止。 |
 | [wait-what](./skills/wait-what/SKILL.md) | 没听懂时，让 AI 补充背景、重新解释。来自 Matt Pocock，需手动调用。 |
 
@@ -102,11 +110,16 @@ npx skills@latest add AojiLi/ai-workflows
 
 ```bash
 npx skills@latest add AojiLi/ai-workflows --skill research --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill paper-reading --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill model-training --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill wait-what --agent codex --yes
 ```
 
 ## 使用
+
+```text
+使用 $paper-reading 帮我读这篇论文：[上传 PDF 或提供论文链接]。
+```
 
 ```text
 使用 $research 调研官方 PPO 训练建议和实现，在这个项目中保存带引用的报告。
@@ -138,6 +151,7 @@ ai-workflows/
 `-- skills/
     |-- README.md
     |-- model-training/
+    |-- paper-reading/
     |-- research/
     `-- wait-what/
 ```

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Reading"
+  short_description: "Explain papers through four grounded reading steps"
+  default_prompt: "Use $paper-reading to explain this paper through author background, the original abstract and its meaning, a method flowchart with step-by-step explanations, and the actual experimental results."
