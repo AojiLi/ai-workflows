@@ -13,6 +13,7 @@ A small library of reusable AI skills for researching primary sources, carrying 
 | [model-training](./skills/model-training/SKILL.md) | Follow established practices, carry out model or RL training and evaluation, and decide reasonably whether to continue. |
 | [wait-what](./skills/wait-what/SKILL.md) | Ask the agent to explain again with missing context and simpler language. Imported from Matt Pocock; invoked manually. |
 | [diagnosing-bugs](./skills/diagnosing-bugs/SKILL.md) | Diagnose hard bugs and performance regressions through reproduction, ranked hypotheses, targeted probes, and regression checks. Imported from Matt Pocock. |
+| [grilling](./skills/grilling/SKILL.md) | Stress-test plans, decisions, and ideas through dependency-aware rounds of questions and recommended answers. Imported from Matt Pocock. |
 
 ## Install
 
@@ -34,9 +35,14 @@ npx skills@latest add AojiLi/ai-workflows --skill paper-reading --agent codex --
 npx skills@latest add AojiLi/ai-workflows --skill model-training --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill wait-what --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill diagnosing-bugs --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill grilling --agent codex --yes
 ```
 
 ## Use
+
+```text
+Use $grilling to stress-test this plan: [describe the plan].
+```
 
 ```text
 Use $diagnosing-bugs to investigate this failure: [symptom, logs, and reproduction steps].
@@ -58,7 +64,7 @@ Use $model-training to train and evaluate this policy. Consult established pract
 Use $wait-what to explain that again with the context I am missing.
 ```
 
-Source and MIT license details: [wait-what](./skills/wait-what/SOURCE.md) and [diagnosing-bugs](./skills/diagnosing-bugs/SOURCE.md).
+Source and MIT license details: [wait-what](./skills/wait-what/SOURCE.md), [diagnosing-bugs](./skills/diagnosing-bugs/SOURCE.md), and [grilling](./skills/grilling/SOURCE.md).
 
 ## Project Instructions for Training
 
@@ -76,6 +82,7 @@ ai-workflows/
 `-- skills/
     |-- README.md
     |-- diagnosing-bugs/
+    |-- grilling/
     |-- model-training/
     |-- paper-reading/
     |-- research/

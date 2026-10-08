@@ -13,6 +13,7 @@
 | [model-training](./skills/model-training/SKILL.md) | 参考成熟做法，实际推进模型或 RL 训练与评估，并合理判断何时继续或停止。 |
 | [wait-what](./skills/wait-what/SKILL.md) | 没听懂时，让 AI 补充背景、重新解释。来自 Matt Pocock，需手动调用。 |
 | [diagnosing-bugs](./skills/diagnosing-bugs/SKILL.md) | 排查难复现的故障和性能退化：建立复现、验证假设、定向检查并回归验证。来自 Matt Pocock。 |
+| [grilling](./skills/grilling/SKILL.md) | 按决策依赖分轮提问，每题附推荐答案，梳理计划、决策与想法。来自 Matt Pocock。 |
 
 ## 安装
 
@@ -34,9 +35,14 @@ npx skills@latest add AojiLi/ai-workflows --skill paper-reading --agent codex --
 npx skills@latest add AojiLi/ai-workflows --skill model-training --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill wait-what --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill diagnosing-bugs --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill grilling --agent codex --yes
 ```
 
 ## 使用
+
+```text
+使用 $grilling 帮我梳理这个计划：[描述计划]。
+```
 
 ```text
 使用 $diagnosing-bugs 排查这个故障：[现象、日志和复现步骤]。
@@ -62,6 +68,8 @@ npx skills@latest add AojiLi/ai-workflows --skill diagnosing-bugs --agent codex 
 
 `diagnosing-bugs` 的来源版本与 MIT 许可证见 [SOURCE.md](./skills/diagnosing-bugs/SOURCE.md)。它用于排查明确故障，RL 训练的收敛与预算判断仍使用 `model-training`。
 
+`grilling` 的来源版本与 MIT 许可证见 [SOURCE.md](./skills/grilling/SOURCE.md)。保留作者原版：按轮等待回答，事实调查交给子代理，讨论达成共识并获得确认后再执行计划。
+
 ## 训练项目的 AGENTS.md
 
 希望训练任务默认使用 `model-training` 时，将 [AGENTS.md 模板](./skills/model-training/assets/AGENTS.md.template) 合并到实际项目根目录的 `AGENTS.md`，保留已有规则。英文模板只负责路由，具体训练流程由 skill 维护。
@@ -78,6 +86,7 @@ ai-workflows/
 `-- skills/
     |-- README.md
     |-- diagnosing-bugs/
+    |-- grilling/
     |-- model-training/
     |-- paper-reading/
     |-- research/
