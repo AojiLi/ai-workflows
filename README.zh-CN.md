@@ -12,6 +12,7 @@
 | [paper-reading](./skills/paper-reading/SKILL.md) | 按四个流程读论文：作者背景、原文摘要与解释、流程图与步骤介绍、实际结果。 |
 | [model-training](./skills/model-training/SKILL.md) | 参考成熟做法，实际推进模型或 RL 训练与评估，并合理判断何时继续或停止。 |
 | [wait-what](./skills/wait-what/SKILL.md) | 没听懂时，让 AI 补充背景、重新解释。来自 Matt Pocock，需手动调用。 |
+| [diagnosing-bugs](./skills/diagnosing-bugs/SKILL.md) | 排查难复现的故障和性能退化：建立复现、验证假设、定向检查并回归验证。来自 Matt Pocock。 |
 
 ## 安装
 
@@ -32,9 +33,14 @@ npx skills@latest add AojiLi/ai-workflows --skill research --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill paper-reading --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill model-training --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill wait-what --agent codex --yes
+npx skills@latest add AojiLi/ai-workflows --skill diagnosing-bugs --agent codex --yes
 ```
 
 ## 使用
+
+```text
+使用 $diagnosing-bugs 排查这个故障：[现象、日志和复现步骤]。
+```
 
 ```text
 使用 $paper-reading 帮我读这篇论文：[上传 PDF 或提供论文链接]。
@@ -54,6 +60,8 @@ npx skills@latest add AojiLi/ai-workflows --skill wait-what --agent codex --yes
 
 `wait-what` 的作者、来源版本及 MIT 许可证见 [SOURCE.md](./skills/wait-what/SOURCE.md)。保留英文原文，默认要求使用简化技术英语；没有项目词汇表也可以使用。
 
+`diagnosing-bugs` 的来源版本与 MIT 许可证见 [SOURCE.md](./skills/diagnosing-bugs/SOURCE.md)。它用于排查明确故障，RL 训练的收敛与预算判断仍使用 `model-training`。
+
 ## 训练项目的 AGENTS.md
 
 希望训练任务默认使用 `model-training` 时，将 [AGENTS.md 模板](./skills/model-training/assets/AGENTS.md.template) 合并到实际项目根目录的 `AGENTS.md`，保留已有规则。英文模板只负责路由，具体训练流程由 skill 维护。
@@ -69,6 +77,7 @@ ai-workflows/
 |-- README.zh-CN.md
 `-- skills/
     |-- README.md
+    |-- diagnosing-bugs/
     |-- model-training/
     |-- paper-reading/
     |-- research/
