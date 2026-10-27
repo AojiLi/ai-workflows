@@ -8,6 +8,7 @@
 
 | Skill | 用途 |
 | --- | --- |
+| [align-understanding](./skills/align-understanding/SKILL.md) | 复述想法与需求，澄清猜测和遗漏，等用户确认理解准确完整后再实现。 |
 | [research](./skills/research/SKILL.md) | 让后台 agent 调研一手资料，在项目中保存带来源引用的 Markdown 报告。 |
 | [paper-reading](./skills/paper-reading/SKILL.md) | 按四个流程读论文：作者背景、原文摘要与解释、流程图与步骤介绍、实际结果。 |
 | [model-training](./skills/model-training/SKILL.md) | 参考成熟做法，实际推进模型或 RL 训练与评估，并合理判断何时继续或停止。 |
@@ -30,6 +31,7 @@ npx skills@latest add AojiLi/ai-workflows
 为 Codex 安装单个 skill：
 
 ```bash
+npx skills@latest add AojiLi/ai-workflows --skill align-understanding --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill research --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill paper-reading --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill model-training --agent codex --yes
@@ -39,6 +41,10 @@ npx skills@latest add AojiLi/ai-workflows --skill grilling --agent codex --yes
 ```
 
 ## 使用
+
+```text
+使用 $align-understanding 和我对齐这个想法，先复述你的理解，等我确认后再实现：[描述想法]。
+```
 
 ```text
 使用 $grilling 帮我梳理这个计划：[描述计划]。
@@ -85,6 +91,7 @@ ai-workflows/
 |-- README.zh-CN.md
 `-- skills/
     |-- README.md
+    |-- align-understanding/
     |-- diagnosing-bugs/
     |-- grilling/
     |-- model-training/

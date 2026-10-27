@@ -8,6 +8,7 @@ A small library of reusable AI skills for researching primary sources, carrying 
 
 | Skill | Purpose |
 | --- | --- |
+| [align-understanding](./skills/align-understanding/SKILL.md) | Restate ideas and requirements, clarify assumptions, and wait for the user to confirm understanding before implementation. |
 | [research](./skills/research/SKILL.md) | Delegate primary-source research to a background agent and save a cited Markdown report in the project. |
 | [paper-reading](./skills/paper-reading/SKILL.md) | Read a paper through author background, its original abstract and explanation, a method flowchart, and actual results. |
 | [model-training](./skills/model-training/SKILL.md) | Follow established practices, carry out model or RL training and evaluation, and decide reasonably whether to continue. |
@@ -30,6 +31,7 @@ npx skills@latest add AojiLi/ai-workflows
 Install one skill for Codex:
 
 ```bash
+npx skills@latest add AojiLi/ai-workflows --skill align-understanding --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill research --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill paper-reading --agent codex --yes
 npx skills@latest add AojiLi/ai-workflows --skill model-training --agent codex --yes
@@ -39,6 +41,10 @@ npx skills@latest add AojiLi/ai-workflows --skill grilling --agent codex --yes
 ```
 
 ## Use
+
+```text
+Use $align-understanding to clarify this idea with me. Restate your understanding first and wait for my confirmation before implementing: [describe the idea].
+```
 
 ```text
 Use $grilling to stress-test this plan: [describe the plan].
@@ -81,6 +87,7 @@ ai-workflows/
 |-- README.zh-CN.md
 `-- skills/
     |-- README.md
+    |-- align-understanding/
     |-- diagnosing-bugs/
     |-- grilling/
     |-- model-training/

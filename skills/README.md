@@ -1,5 +1,6 @@
 # AI Workflow Skills
 
+- **[align-understanding](./align-understanding/SKILL.md)** — Restate ideas and requirements, clarify assumptions, and wait for the user to confirm understanding before implementation.
 - **[research](./research/SKILL.md)** — Research primary sources in a background agent and save a cited Markdown report in the project.
 - **[model-training](./model-training/SKILL.md)** — Carry out model and RL training using established practices, independent evaluation, and reasonable stopping decisions.
 - **[paper-reading](./paper-reading/SKILL.md)** — Explain a paper through author background, the original abstract, method flowcharts, and actual results.
